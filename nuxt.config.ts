@@ -13,6 +13,8 @@ export default defineNuxtConfig({
 
     routeRules: {
         '/': {prerender: true},
+        '/articles': {prerender: true},
+        '/blog/:slug': {prerender: true},
     },
 
     image: {
