@@ -102,6 +102,11 @@ section.article {
   line-height: 20px;
 }
 
+.notion-list {
+  word-break: break-all;
+  padding-inline-start: 20px;
+}
+
 .notion-simple-table-header {
   background: rgb(247, 246, 243);
   font-weight: 500;
@@ -131,8 +136,6 @@ section.article {
   pre.notion-code code {
     width: 80vw;
     overflow-x: auto;
-    display: block;
-    overflow-y: hidden;
   }
 
   .notion-list {
