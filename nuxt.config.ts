@@ -11,6 +11,10 @@ export default defineNuxtConfig({
         transpile: ['vue-notion'],
     },
 
+    routeRules: {
+        '/': {prerender: true},
+    },
+
     image: {
         format: ['avif', 'webp', 'jpg'],
         provider: 'ipx',
