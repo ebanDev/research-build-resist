@@ -2,7 +2,7 @@
   <section class="article">
     <top-nav/>
     <h1>
-      {{ Object.values(Object.values(blockMap)[0].value.properties)[5][0][0] }}
+      {{ articleProps.Title }}
     </h1>
     <NotionRenderer
         :blockMap="blockMap"
@@ -11,17 +11,20 @@
 </template>
 
 <script setup>
-const {width} = useWindowSize()
+import {fetchArticles} from "~/services/articles.js";
 
 const route = useRoute()
 const router = useRouter()
 const {$notion} = useNuxtApp();
 const articleId = route.params.slug.replace(/-/g, "")
 
-// use Notion module to get Notion blocks from the API via a Notion pageId
 const {data: blockMap} = useAsyncData("page_nuxt", () =>
     $notion.getPageBlocks(articleId)
 );
+
+const {data, pending, error} = await useAsyncData("all_posts", fetchArticles);
+
+const articleProps = data._value.posts.find(x => x.id = articleId);
 </script>
 
 <style lang="scss">
