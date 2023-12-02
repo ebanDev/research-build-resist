@@ -92,6 +92,11 @@ button {
   font-size: 22px;
 }
 
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
 .card {
   border-radius: 20px;
   border: 2px solid #E6E3E1;

@@ -42,12 +42,20 @@
 
 <script lang="ts" setup>
 
-import {useWindowSize} from "@vueuse/core";
 import ArticleCard from "~/components/atomic/ArticleCard.vue";
 import {fetchArticles} from "~/services/articles";
 
-const {width} = useWindowSize()
 const route = useRoute()
 
 const {data, pending, error} = await useAsyncData("all_posts", fetchArticles);
+
+useHead({
+  title: 'Articles | Eban Rami',
+  meta: [
+    {
+      name: 'description',
+      content: "All the articles I've written",
+    },
+  ],
+})
 </script>

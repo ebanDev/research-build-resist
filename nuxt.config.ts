@@ -14,7 +14,6 @@ export default defineNuxtConfig({
     routeRules: {
         '/': {prerender: true},
         '/articles': {prerender: true},
-        '/blog/:slug': {prerender: true},
     },
 
     image: {
@@ -25,6 +24,25 @@ export default defineNuxtConfig({
                 format: 'avif',
             },
         },
+    },
+
+    app: {
+        head: {
+            title: 'Eban Rami',
+            meta: [
+                {charset: 'utf-8'},
+                {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+                {name: 'theme-color', content: '#2E6934'},
+                {name: 'apple-mobile-web-app-status-bar-style', content: '#2E6934'},
+                {name: 'lang', content: 'fr'},
+                {name: 'author', content: 'Eban Rami'},
+            ],
+        }
+    },
+
+
+    site: {
+        url: 'https://eban.eu.org',
     },
 
     googleFonts: {

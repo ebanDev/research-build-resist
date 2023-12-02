@@ -1,3 +1,4 @@
+
 export async function fetchArticles() {
     const {$notion} = useNuxtApp();
 

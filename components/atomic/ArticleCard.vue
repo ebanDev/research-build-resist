@@ -4,37 +4,38 @@ const props = defineProps(['post'])
 </script>
 
 <template>
-  <div :class="{ card: true, highlighted: props.post.Highlighted }"
-       @click="useRouter.push(`/blog/${props.post.id}`)">
-    <img v-if="props.post.Highlighted" :src="props.post.Cover" alt="Article cover">
-    <div class="content">
-      <div class="metadata">
+  <nuxt-link :to="`/blog/${props.post.Slug}`">
+    <div :class="{ card: true, highlighted: props.post.Highlighted }">
+      <img v-if="props.post.Highlighted" :src="props.post.Cover" alt="Article cover">
+      <div class="content">
+        <div class="metadata">
         <span class="category">
           {{ props.post.Category[0] }}
         </span>
 
-        <span class="time">
+          <span class="time">
           {{
-            new Date(props.post.Date).toLocaleDateString('en-GB', {
-              day: '2-digit',
-              month: 'short',
-              year: 'numeric'
-            })
-          }}
+              new Date(props.post.Date).toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: 'short',
+                year: 'numeric'
+              })
+            }}
         </span>
+        </div>
+
+        <h4>
+          {{ props.post.Title }}
+        </h4>
+
+        <p>
+          {{ props.post.Description }}
+        </p>
+
+
       </div>
-
-      <h4>
-        {{ props.post.Title }}
-      </h4>
-
-      <p>
-        {{ props.post.Description }}
-      </p>
-
-
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <style lang="scss" scoped>

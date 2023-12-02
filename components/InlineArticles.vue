@@ -7,15 +7,16 @@
         <h3>articles i’ve written</h3>
       </div>
 
-      <button
-          @click="useRouter.push({ path : '/articles'})">
-        See more
-      </button>
+      <router-link to="/articles">
+        <button>
+          See more
+        </button>
+      </router-link>
     </div>
 
     <div class="cardList">
       <ArticleCard
-          v-for="article in data.posts"
+          v-for="article in posts"
           :key="article.id"
           :post="article"
       />
@@ -77,4 +78,6 @@ import {fetchArticles} from "~/services/articles.js";
 const useRouter = useNuxtApp().$router
 
 const {data, pending, error} = await useAsyncData("all_posts", fetchArticles);
+
+const posts = data._value.posts.filter(x => x.Highlighted)
 </script>

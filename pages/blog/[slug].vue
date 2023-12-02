@@ -16,15 +16,24 @@ import {fetchArticles} from "~/services/articles.js";
 const route = useRoute()
 const router = useRouter()
 const {$notion} = useNuxtApp();
-const articleId = route.params.slug.replace(/-/g, "")
-
-const {data: blockMap} = useAsyncData("page_nuxt", () =>
-    $notion.getPageBlocks(articleId)
-);
-
+const articleSlug = route.params.slug
 const {data, pending, error} = await useAsyncData("all_posts", fetchArticles);
 
-const articleProps = data._value.posts.find(x => x.id = articleId);
+const articleProps = data._value.posts.find(x => x.Slug === articleSlug);
+
+const {data: blockMap} = useAsyncData("page_nuxt", () =>
+    $notion.getPageBlocks(articleProps.id)
+);
+
+useHead({
+  title: `${articleProps.Title} | Eban Rami`,
+  meta: [
+    {
+      name: 'description',
+      content: articleProps.Description,
+    },
+  ],
+})
 </script>
 
 <style lang="scss">
