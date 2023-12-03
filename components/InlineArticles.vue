@@ -59,14 +59,19 @@
     padding-bottom: 15px;
     flex-direction: row;
     display: flex;
-  }
 
-  .cardList .card.highlighted:first-child {
-    margin-left: 15px;
-  }
+    a {
+    flex-shrink: 0;
+    width: 80%
+    }
 
-  .cardList .card.highlighted:last-child {
-    margin-right: 15px;
+    a:first-child {
+      margin-left: 15px;
+    }
+    
+    a:last-child {
+        margin-right: 15px;
+    }
   }
 }
 </style>
