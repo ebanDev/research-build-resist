@@ -8,6 +8,7 @@
 
 ![TypeScript](https://img.shields.io/badge/-TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Yarn](https://img.shields.io/badge/-Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
+![ChecklyResponseTime](https://api.checklyhq.com/v1/badges/checks/29d52d2a-ba63-4be4-abb2-1676d0d6517f?style=flat&theme=default&responseTime=true)
 
 </div>
 
