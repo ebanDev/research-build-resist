@@ -21,7 +21,6 @@
 - [Nuxt.js](https://nuxtjs.org/) with modules :
     - 🖼️ @nuxt/image
     - 🗛 @nuxtjs/google-fonts
-    - 🗺️ nuxt-simple-sitemap
     - 📦 nuxt-schema-org
     - ✍️ vue-notion
 - Yarn

@@ -2,7 +2,6 @@ export default defineNuxtConfig({
     modules: [
         '@nuxt/image-edge',
         '@nuxtjs/google-fonts',
-        'nuxt-simple-sitemap',
         'nuxt-schema-org',
         '@vueuse/nuxt',
     ],
