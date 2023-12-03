@@ -7,7 +7,7 @@
         <h3>articles i’ve written</h3>
       </div>
 
-      <router-link to="/articles">
+      <router-link to="/articles" >
         <button>
           See more
         </button>

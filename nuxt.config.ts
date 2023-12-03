@@ -35,6 +35,7 @@ export default defineNuxtConfig({
                 {name: 'apple-mobile-web-app-status-bar-style', content: '#2E6934'},
                 {name: 'lang', content: 'fr'},
                 {name: 'author', content: 'Eban Rami'},
+                {name: 'description', content: 'i’m a student building in the realms of sysadmin, web development, and cybersecurity to catalyze radical change'}
             ],
             htmlAttrs: {
                 lang: 'fr'
