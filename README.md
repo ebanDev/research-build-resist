@@ -23,6 +23,7 @@
     - 🖼️ @nuxt/image
     - 🗛 @nuxtjs/google-fonts
     - 📦 nuxt-schema-org
+    - 🗺️ nuxt-simple-sitemap
     - ✍️ vue-notion
 - Yarn
 
