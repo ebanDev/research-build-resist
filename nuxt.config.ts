@@ -36,6 +36,9 @@ export default defineNuxtConfig({
                 {name: 'lang', content: 'fr'},
                 {name: 'author', content: 'Eban Rami'},
             ],
+            htmlAttrs: {
+                lang: 'fr'
+            }
         }
     },
 
