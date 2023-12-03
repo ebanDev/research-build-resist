@@ -39,7 +39,7 @@ header {
     transition: 0.3s all ease;
   }
 
-  img {
+  img, picture {
     border-radius: 20px;
     height: 100px;
     width: 100px;
@@ -72,9 +72,12 @@ header {
     box-shadow: $box-shadow-primary;
 
 
-    & img {
+    & img, & picture {
       height: 70px;
       width: 70px;
+    }
+
+    & img {
       margin-left: 15px;
     }
   }
@@ -96,7 +99,7 @@ header {
     box-shadow: 5px 5px 15px 0 rgba(40, 10, 0, 0.08);
     gap: 35px;
 
-    & img {
+    & img, & picture {
       height: 70px;
       width: 70px;
       margin: 0;
