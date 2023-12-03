@@ -6,6 +6,7 @@
     </h1>
     <NotionRenderer
         :blockMap="blockMap"
+        :key="articleProps.id"
     />
   </section>
 </template>
