@@ -145,6 +145,11 @@ section.article {
   pre.notion-code code {
     width: 80vw;
     overflow-x: auto;
+    display: block
+  }
+
+  code.notion-inline-code span {
+    word-break: break-all;
   }
 
   .notion-list {
