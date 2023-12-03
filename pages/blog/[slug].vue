@@ -11,30 +11,19 @@
 </template>
 
 <script setup>
-import {watch} from 'vue'
 import {fetchArticles} from "~/services/articles.js";
 
 const route = useRoute()
 const router = useRouter()
 const {$notion} = useNuxtApp();
-let articleSlug = route.params.slug
-let data = await useAsyncData("all_posts", fetchArticles);
-let articleProps = data.data._value.posts.find(x => x.Slug === articleSlug);
-let {data: blockMap} = useAsyncData("page_nuxt", () =>
+const articleSlug = route.params.slug
+const {data, pending, error} = await useAsyncData("all_posts", fetchArticles);
+
+const articleProps = data._value.posts.find(x => x.Slug === articleSlug);
+
+const {data: blockMap} = useAsyncData("page_nuxt", () =>
     $notion.getPageBlocks(articleProps.id)
 );
-
-watch(() => route.params.slug, async (newSlug) => {
-  // Update the articleSlug
-  articleSlug = newSlug
-
-  // Fetch the data again
-  data = await useAsyncData("all_posts", fetchArticles);
-  articleProps = data.data._value.posts.find(x => x.Slug === articleSlug);
-  blockMap = useAsyncData("page_nuxt", () =>
-      $notion.getPageBlocks(articleProps.id)
-  );
-})
 
 useHead({
   title: `${articleProps.Title} | Eban Rami`,
