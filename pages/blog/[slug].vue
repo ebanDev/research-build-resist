@@ -6,7 +6,6 @@
     </h1>
     <NotionRenderer
         :blockMap="blockMap"
-        :key="articleProps.id"
     />
   </section>
 </template>
@@ -22,7 +21,7 @@ const {data, pending, error} = await useAsyncData("all_posts", fetchArticles);
 
 const articleProps = data._value.posts.find(x => x.Slug === articleSlug);
 
-const {data: blockMap} = useAsyncData("page_nuxt", () =>
+const {data: blockMap} = useAsyncData(articleProps.Slug, () =>
     $notion.getPageBlocks(articleProps.id)
 );
 
