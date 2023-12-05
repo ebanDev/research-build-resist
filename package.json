@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.1.0",
-    "@nuxt/image-edge": "^1.1.0-28346300.6030589",
+    "@nuxt/image-edge": "^1.1.0-28355789.b3279fe",
     "@vueuse/core": "^10.6.1",
     "normalize.css": "^8.0.1",
     "sass": "^1.69.5"
