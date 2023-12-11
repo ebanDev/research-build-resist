@@ -4942,10 +4942,10 @@ nuxt-schema-org@^3.2.0:
     shiki-es "^0.14.0"
     sirv "^2.0.3"
 
-nuxt-simple-sitemap@^4.1.3:
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/nuxt-simple-sitemap/-/nuxt-simple-sitemap-4.1.7.tgz#a75b475eea570ccefa6247d61b4765476b681505"
-  integrity sha512-6ez2ws8ShgETNoqX4skcSuczoirsCNWsH4WMbAaUAl0FBP4fcwWav9ZkVA7S/H2ZMQrJ3pUzirEuAuB+VXpT1Q==
+nuxt-simple-sitemap@^4.1.10:
+  version "4.1.10"
+  resolved "https://registry.yarnpkg.com/nuxt-simple-sitemap/-/nuxt-simple-sitemap-4.1.10.tgz#715ae367a9284fdd98f0de10aa20fa7fc6c3e184"
+  integrity sha512-p6MrZ57bHjd5maTz/SN/fNin6k44+JvTK+/DegicDRsaFnw84Ac7D1zS/fYsnOGirJ8iy5fc2bYQNDUM90hi+A==
   dependencies:
     "@nuxt/devtools-kit" "^1.0.4"
     "@nuxt/devtools-ui-kit" "^1.0.4"
