@@ -948,10 +948,10 @@
     which "^3.0.1"
     ws "^8.14.2"
 
-"@nuxt/image-edge@^1.1.0-28346300.6030589":
-  version "1.1.0-28355789.b3279fe"
-  resolved "https://registry.yarnpkg.com/@nuxt/image-edge/-/image-edge-1.1.0-28355789.b3279fe.tgz#056ac7e0ee805d5f3dd25e004628d54d9410dc18"
-  integrity sha512-3lNVqNqVjt1NYjxFzLz0A/19ghZyKviu51g+A3vDdZeee0iTwHP024DFDXS+UU9GNh5aEXsyZy0WN+0DVFnESQ==
+"@nuxt/image-edge@^1.1.0-28369225.69da174":
+  version "1.1.0-28369225.69da174"
+  resolved "https://registry.yarnpkg.com/@nuxt/image-edge/-/image-edge-1.1.0-28369225.69da174.tgz#3171242020e26badf4a27b165e28515d1e61efb9"
+  integrity sha512-qSz1+SRiRsZuabE23jD5QgV7qdSlE5/9mIlHM6ukP5AlUeru05z3Rym0Ax2SAKIoIu1caF5kyweftb2PzJGUvQ==
   dependencies:
     "@nuxt/kit" "^3.8.2"
     consola "^3.2.3"
@@ -961,7 +961,7 @@
     node-fetch-native "^1.4.1"
     ohash "^1.1.3"
     pathe "^1.1.1"
-    std-env "^3.5.0"
+    std-env "^3.6.0"
     ufo "^1.3.2"
   optionalDependencies:
     ipx "^2.0.2"
@@ -6193,7 +6193,7 @@ statuses@2.0.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-2.0.1.tgz#55cb000ccf1d48728bd23c685a063998cf1a1b63"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
-std-env@^3.4.3, std-env@^3.5.0:
+std-env@^3.4.3, std-env@^3.5.0, std-env@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.6.0.tgz#94807562bddc68fa90f2e02c5fd5b6865bb4e98e"
   integrity sha512-aFZ19IgVmhdB2uX599ve2kE6BIE3YMnQ6Gp6BURhW/oIzpXGKr878TQfAQZn1+i0Flcc/UKUy1gOlcfaUBCryg==
