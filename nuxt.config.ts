@@ -63,18 +63,6 @@ export default defineNuxtConfig({
     ],
 
     sitemap: {
-        sitemaps: {
-            posts: {
-                include: [
-                    '/blog/**',
-                ],
-                defaults: {priority: 0.7},
-            },
-            pages: {
-                exclude: [
-                    '/blog/**',
-                ]
-            }
-        }
+        sitemapName: 'public/sitemap.xml'
     }
 })
