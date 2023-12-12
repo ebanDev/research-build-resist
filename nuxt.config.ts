@@ -3,8 +3,8 @@ export default defineNuxtConfig({
         '@nuxt/image-edge',
         '@nuxtjs/google-fonts',
         'nuxt-schema-org',
-        'nuxt-simple-sitemap',
         '@vueuse/nuxt',
+        'nuxt-simple-sitemap',
     ],
 
     build: {
@@ -61,4 +61,20 @@ export default defineNuxtConfig({
         'normalize.css/normalize.css',
         '@/assets/scss/main.scss',
     ],
+
+    sitemap: {
+        sitemaps: {
+            posts: {
+                include: [
+                    '/blog/**',
+                ],
+                defaults: {priority: 0.7},
+            },
+            pages: {
+                exclude: [
+                    '/blog/**',
+                ]
+            }
+        }
+    }
 })
