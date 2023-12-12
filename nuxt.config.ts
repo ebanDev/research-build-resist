@@ -63,6 +63,6 @@ export default defineNuxtConfig({
     ],
 
     sitemap: {
-        sitemapName: 'public/sitemap.xml'
+        sitemapName: 'static/sitemap.xml'
     }
 })
