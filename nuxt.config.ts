@@ -5,6 +5,7 @@ export default defineNuxtConfig({
         'nuxt-schema-org',
         'nuxt-simple-sitemap',
         '@vueuse/nuxt',
+        'nuxt-icon'
     ],
 
     build: {

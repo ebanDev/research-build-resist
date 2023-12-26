@@ -16,6 +16,21 @@ onMounted(() => {
     <NuxtPicture alt="My profile picture" src="/profile-picture.jpg" @click="useRouter.push({ path: '/' })"/>
     <h4 @click="useRouter.push({ path: '/' })">Research, Build, Resist.</h4>
     <div class="icons">
+      <a href="https://github.com/ebanDev" target="_blank">
+        <Icon name="lucide:github"/>
+      </a>
+      <a href="https://twitter.com/eban_non" target="_blank">
+        <Icon name="lucide:twitter"/>
+      </a>
+      <a href="https://instagram.com/eban_non" target="_blank">
+        <Icon name="lucide:instagram"/>
+      </a>
+      <a href="mailto:contact@eban.eu.org" target="_blank">
+        <Icon name="lucide:mail"/>
+      </a>
+      <a href="https://www.linkedin.com/in/eban-rami/" target="_blank">
+        <Icon name="lucide:linkedin"/>
+      </a>
     </div>
   </header>
 </template>
@@ -28,22 +43,22 @@ header {
   top: 0;
   left: 25%;
   right: 25%;
-  display: flex;
-  justify-content: space-between;
   margin: 24px 0;
   height: 100px;
   align-items: center;
   transition: 0.3s all ease;
-
-  * {
-    transition: 0.3s all ease;
-  }
+  display: flex;
+  justify-content: space-between;
 
   img, picture {
     border-radius: 20px;
     height: 100px;
     width: 100px;
     cursor: pointer;
+  }
+
+  picture {
+    width: 160px;
   }
 
   h4 {
@@ -53,9 +68,18 @@ header {
   }
 
   .icons {
-    width: 100px;
     display: flex;
     gap: 10px;
+
+    .icon {
+      height: 24px;
+      width: auto;
+    }
+  }
+
+
+  * {
+    transition: 0.3s all ease;
   }
 
   &.scrolled {
@@ -67,20 +91,21 @@ header {
     margin: 24px 2.5%;
     border: 3px solid $color-header-border;
     border-radius: 25px;
-    height: 90px;
+    height: 80px;
     backdrop-filter: blur(10px);
     box-shadow: $box-shadow-primary;
+    padding: 0 25px 0 15px;
 
-
-    & img, & picture {
-      height: 70px;
-      width: 70px;
+    img, picture {
+      height: 60px;
+      width: 60px;
     }
 
-    & img {
-      margin-left: 15px;
+    picture {
+      width: 160px;
     }
   }
+
 }
 
 @media (max-width: 768px) {
