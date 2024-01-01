@@ -26,6 +26,6 @@
     "@nuxt/image-edge": "^1.1.0-28389042.1c39ac3",
     "@vueuse/core": "^10.6.1",
     "normalize.css": "^8.0.1",
-    "sass": "^1.69.5"
+    "sass": "^1.69.6"
   }
 }
