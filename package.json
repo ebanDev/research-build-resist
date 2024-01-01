@@ -17,7 +17,7 @@
     "nuxt-schema-org": "^3.3.0",
     "nuxt-simple-sitemap": "^4.2.0",
     "sass-loader": "^13.3.2",
-    "vue": "^3.3.13",
+    "vue": "^3.4.3",
     "vue-notion": "^3.0.0-beta.1",
     "vue-router": "^4.2.5"
   },
