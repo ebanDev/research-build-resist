@@ -24,7 +24,7 @@
   "dependencies": {
     "@nuxt/image": "^1.1.0",
     "@nuxt/image-edge": "^1.1.0-28412089.180ea78",
-    "@vueuse/core": "^10.6.1",
+    "@vueuse/core": "^10.7.1",
     "normalize.css": "^8.0.1",
     "sass": "^1.69.7"
   }
