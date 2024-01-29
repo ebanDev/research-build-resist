@@ -8,6 +8,11 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  window.addEventListener('keydown', (e) => {
+    if (e.key === '/' || e.key === '.') {
+      window.location = 'https://terminal.eban.eu.org'
+    }
+  })
 })
 </script>
 
@@ -22,14 +27,14 @@ onMounted(() => {
       <a href="https://twitter.com/eban_non" target="_blank">
         <Icon name="lucide:twitter"/>
       </a>
-      <a href="https://instagram.com/eban_non" target="_blank">
-        <Icon name="lucide:instagram"/>
-      </a>
       <a href="mailto:contact@eban.eu.org" target="_blank">
         <Icon name="lucide:mail"/>
       </a>
       <a href="https://www.linkedin.com/in/eban-rami/" target="_blank">
         <Icon name="lucide:linkedin"/>
+      </a>
+      <a href="https://terminal.eban.eu.org" target="_blank">
+        <Icon name="lucide:terminal-square"/>
       </a>
     </div>
   </header>
