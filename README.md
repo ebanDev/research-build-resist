@@ -33,7 +33,7 @@ Clone the repository and install the dependencies:
 
 ```bash
 git clone https://github.com/ebanDev/research-build-resist.git
-cd project
+cd research-build-resist
 yarn install
 ```
 
