@@ -1,6 +1,7 @@
 <template>
   <TopNav/>
   <About/>
-  <Organizations/>
   <InlineArticles/>
+  <Projects />
+  <Organizations/>
 </template>

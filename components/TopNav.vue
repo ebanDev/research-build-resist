@@ -70,6 +70,8 @@ header {
     color: $color-accent;
     font-size: 32px;
     cursor: pointer;
+    text-align: center;
+    margin: 10px;
   }
 
   .icons {
