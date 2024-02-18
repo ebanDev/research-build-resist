@@ -42,4 +42,10 @@ const projects = await fetchProjects();
   gap: 20px;
 }
 
+
+@media (min-width: 768px) {
+  .cardList {
+    width: 80vw;
+  }
+}
 </style>
