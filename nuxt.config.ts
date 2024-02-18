@@ -3,7 +3,7 @@ export default defineNuxtConfig({
         '@nuxt/image-edge',
         '@nuxtjs/google-fonts',
         'nuxt-schema-org',
-        'nuxt-simple-sitemap',
+        '@nuxtjs/sitemap',
         '@vueuse/nuxt',
         'nuxt-icon'
     ],
