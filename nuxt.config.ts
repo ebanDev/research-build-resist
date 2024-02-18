@@ -50,6 +50,10 @@ export default defineNuxtConfig({
         url: 'https://eban.eu.org',
     },
 
+    sitemap: {
+        discoverImages: false
+    },
+
     googleFonts: {
         download: true,
         families: {
