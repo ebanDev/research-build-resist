@@ -20,7 +20,7 @@ a {
 }
 
 .header {
-  margin: 0 0 35px 0;
+  margin: 0 0 25px 0;
 }
 
 h4 {
@@ -40,7 +40,7 @@ p {
 .card {
   width: 200px;
   height: max-content;
-  padding: 35px;
+  padding: 30px;
 }
 
 @media (max-width: 768px) {

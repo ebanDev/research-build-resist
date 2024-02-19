@@ -45,7 +45,7 @@ const projects = await fetchProjects();
 
 @media (min-width: 768px) {
   .cardList {
-    width: 80vw;
+    width: 75vw;
   }
 }
 </style>
