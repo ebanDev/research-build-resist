@@ -26,7 +26,7 @@ const {data: blockMap} = useAsyncData(articleProps.Slug, () =>
 );
 
 useHead({
-  title: `${articleProps.Title} | Eban Rami`,
+  title: `${articleProps.Title} | Eban`,
   meta: [
     {
       name: 'description',
@@ -114,6 +114,11 @@ section.article {
 .notion-list {
   word-break: break-all;
   padding-inline-start: 20px;
+}
+
+.notion-link span {
+  color: $color-accent;
+  text-decoration: underline;
 }
 
 .notion-simple-table-header {
