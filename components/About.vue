@@ -15,6 +15,10 @@ section {
   padding-bottom: 50px;
 }
 
+h1 {
+  font-size: 94px;
+}
+
 p {
   margin-top: 50px !important;
   line-height: 1.5;

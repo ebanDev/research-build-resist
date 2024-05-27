@@ -14,7 +14,6 @@
 import {fetchArticles} from "~/services/articles.js";
 
 const route = useRoute()
-const router = useRouter()
 const {$notion} = useNuxtApp();
 const articleSlug = route.params.slug
 const {data, pending, error} = await useAsyncData("all_posts", fetchArticles);
@@ -41,6 +40,7 @@ useHead({
 
 section.article {
   max-width: 900px;
+  padding-top: 200px;
 }
 
 .notion-page-cover {
@@ -129,6 +129,17 @@ section.article {
 .notion-toggle {
   padding: 10px;
   cursor: pointer;
+}
+
+.notion-callout {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid $color-header-border;
+  background: rgba(219, 216, 203, 0.5);
+  margin: 20px 0;
 }
 
 @media (max-width: 768px) {
