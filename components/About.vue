@@ -12,6 +12,7 @@
 
 section {
   padding-top: 300px;
+  padding-bottom: 50px;
 }
 
 p {
