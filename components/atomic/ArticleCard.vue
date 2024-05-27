@@ -92,6 +92,7 @@ img {
 .metadata {
   display: flex;
   align-self: flex-start;
+  flex-wrap: wrap;
   gap: 10px;
 
   span {

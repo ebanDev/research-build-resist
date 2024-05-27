@@ -49,7 +49,7 @@ p {
   }
 
   .card {
-    width: 100%;
+    width: fit-content;
     height: max-content;
     padding-bottom: 20px;
   }
@@ -60,7 +60,8 @@ p {
 
   p {
     font-size: 20px;
-    width: 80%;
+    width: 100%;
+    margin: 0;
   }
 
   .orgIcon {
