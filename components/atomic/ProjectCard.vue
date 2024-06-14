@@ -1,7 +1,7 @@
 <script setup>
 defineProps(['name', 'description', 'url'])
 </script>
-`
+
 <template>
   <a :href="url" target="_blank" class="card">
     <div class="header">
@@ -20,18 +20,19 @@ a {
 }
 
 .header {
-  margin: 0 0 25px 0;
+  margin: 0 0 15px 0;
 }
 
 h4 {
   margin: 0;
-  font-size: 22px;
+  font-size: 1.3rem;
   font-family: $font-family-sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 p {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
   margin: 0 auto;
@@ -40,7 +41,7 @@ p {
 .card {
   width: 200px;
   height: max-content;
-  padding: 30px;
+  padding: 22px;
 }
 
 @media (max-width: 768px) {

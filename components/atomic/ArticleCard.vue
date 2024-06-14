@@ -46,25 +46,25 @@ const props = defineProps(['post'])
   height: 350px;
 
   &.highlighted {
-    width: 530px;
-    height: 590px;
+    width: 400px;
+    height: 500px;
 
     h4 {
-      font-size: 30px;
+      font-size: 1.5rem;
     }
 
     .content {
-      padding: 35px;
+      padding: 25px;
       display: flex;
       gap: 15px;
     }
 
     .category, .time {
-      font-size: 16px;
+      font-size: 0.8rem;
     }
 
     p {
-      font-size: 20px;
+      font-size: 1.1rem;
     }
   }
 }
@@ -99,7 +99,7 @@ img {
     border: 3px solid $color-accent;
     font-size: 12px;
     font-weight: 700;
-    padding: 10px 15px;
+    padding: 7.5px 10px;
     border-radius: 25px;
     height: max-content;
   }
@@ -118,8 +118,8 @@ p {
   margin: 0 auto;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 7;
-  line-clamp: 7;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
   -webkit-box-orient: vertical;
 }
 

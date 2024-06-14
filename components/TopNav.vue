@@ -56,9 +56,9 @@ header {
   justify-content: space-between;
 
   img, picture {
-    border-radius: 20px;
-    height: 100px;
-    width: 100px;
+    border-radius: 16px;
+    height: 90px;
+    width: 90px;
     cursor: pointer;
   }
 
@@ -68,7 +68,7 @@ header {
 
   h4 {
     color: $color-accent;
-    font-size: 32px;
+    font-size: 2rem;
     cursor: pointer;
     text-align: center;
     margin: 10px;
@@ -79,7 +79,7 @@ header {
     gap: 10px;
 
     .icon {
-      height: 24px;
+      height: 22px;
       width: auto;
     }
   }

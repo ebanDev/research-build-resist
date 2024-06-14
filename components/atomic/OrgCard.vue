@@ -28,27 +28,22 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 18px;
   margin: 35px;
 }
 
 h4 {
   margin: 0;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-family: $font-family-sans-serif;
   font-weight: 700;
 }
 
-picture {
-  width: 86px;
-  height: 86px;
-}
-
 p {
-  font-size: 21px;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.4;
-  width: 370px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -76,5 +71,12 @@ p {
     width: 49px;
     height: 49px;
   }
+}
+</style>
+
+<style>
+.orgIcon, .orgIcon img {
+  width: 4rem;
+  height: 4rem;
 }
 </style>

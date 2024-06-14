@@ -16,11 +16,11 @@ section {
 }
 
 h1 {
-  font-size: 94px;
+  font-size: 5.5rem;
 }
 
 p {
-  margin-top: 50px !important;
+  margin-top: 1.2rem !important;
   line-height: 1.5;
 }
 

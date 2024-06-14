@@ -21,12 +21,12 @@
 <style lang="scss" scoped>
 @import "/assets/scss/variables.scss";
 
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 
 .cardList {
   flex-wrap: wrap;

@@ -47,15 +47,15 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 86px;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 3.5rem;
 }
 
 h3 {
-  font-size: 42px;
+  font-size: 2rem;
   color: $color-text-secondary;
   margin-top: 5px;
 }
@@ -64,13 +64,17 @@ p {
   font-family: $font-family-sans-serif;
   font-weight: 600;
   color: $color-text-secondary;
-  font-size: 28px;
+  font-size: 1.5rem;
 }
 
 section {
   width: 65%;
-  padding-top: 75px;
+  padding-top: 200px;
   margin: 0 auto;
+}
+
+section:not(body > section) {
+  padding-top: 100px;
 }
 
 .cardList {
@@ -85,11 +89,16 @@ button {
   color: $color-background;
   border: none;
   cursor: pointer;
-  border-radius: 15px;
-  padding: 15px 25px;
+  border-radius: 0.8rem;
+  padding: 12.5px 17.5px;
   font-family: $font-family-sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $color-accent-darker;
+  }
 }
 
 a {
@@ -102,8 +111,8 @@ a {
   border: 2px solid #E6E3E1;
   background: #FCFBF7;
   box-shadow: $box-shadow-primary;
-  width: 450px;
-  height: 460px;
+  width: 400px;
+  height: 400px;
   transition: all 0.1s ease;
   display: flex;
   flex-direction: column;
