@@ -14,19 +14,19 @@
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/sitemap": "^5.2.0",
     "node-sass": "^9.0.0",
-    "nuxt": "^3.11.1",
+    "nuxt": "^3.12.2",
     "nuxt-icon": "^0.6.9",
     "nuxt-schema-org": "^3.3.6",
     "sass-loader": "^14.1.1",
     "vue": "^3.4.27",
     "vue-notion": "^3.0.0-beta.1",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.4.0"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
     "@nuxt/image-edge": "^1.1.0-28416198.1e7d37b",
-    "@vueuse/core": "^10.7.2",
+    "@vueuse/core": "^10.11.0",
     "normalize.css": "^8.0.1",
-    "sass": "^1.72.0"
+    "sass": "^1.77.6"
   }
 }
