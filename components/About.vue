@@ -1,9 +1,7 @@
 <template>
   <section id="about">
-    <h1>Hi there, I’m <span>Eban</span> !</h1>
-    <h2>Welcome to my corner of the internet 🌱</h2>
-    <p>i’m a student building in the realms of sysadmin, web development, and cybersecurity to catalyze radical
-      change</p>
+    <h1>{{ $t('hi') }} <span>Eban</span>, {{ $t('work') }}</h1>
+    <p>{{ $t('aboutDesc') }}</p>
   </section>
 </template>
 

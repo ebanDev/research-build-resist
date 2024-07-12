@@ -4,12 +4,12 @@
     <div class="header">
       <div class="titles">
         <h2>Bytes of <span>insight</span></h2>
-        <h3>articles i’ve written</h3>
+        <h3>{{ $t('articleListDesc') }}</h3>
       </div>
 
       <router-link to="/articles" >
         <button>
-          See more
+          {{ $t('viewAll') }}
         </button>
       </router-link>
     </div>
@@ -68,7 +68,7 @@
     a:first-child {
       margin-left: 15px;
     }
-    
+
     a:last-child {
         margin-right: 15px;
     }

@@ -11,7 +11,7 @@ const projects = await fetchProjects();
     <div class="header">
       <div class="titles">
         <h2>Crafting <span>projects</span></h2>
-        <h3>ventures i’m working on</h3>
+        <h3>{{$t('projectsListDesc')}}</h3>
       </div>
     </div>
 

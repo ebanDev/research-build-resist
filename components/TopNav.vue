@@ -1,4 +1,5 @@
 <script setup>
+const { locale, setLocale } = useI18n()
 let scrolled = ref(false)
 const useRouter = useNuxtApp().$router
 
@@ -35,6 +36,14 @@ onMounted(() => {
       </a>
       <a href="https://terminal.eban.eu.org" target="_blank">
         <Icon name="lucide:terminal-square"/>
+      </a>
+      <a @click="setLocale('fr')" v-if="locale !== 'fr'">
+        <Icon name="ph:translate-bold"/>
+        FR
+      </a>
+      <a @click="setLocale('en')" v-else>
+        <Icon name="ph:translate-bold"/>
+        EN
       </a>
     </div>
   </header>
@@ -77,6 +86,15 @@ header {
   .icons {
     display: flex;
     gap: 10px;
+
+    a {
+      cursor: pointer;
+      transition: 0.1s all ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
 
     .icon {
       height: 22px;

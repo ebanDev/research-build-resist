@@ -1,7 +1,7 @@
 <template>
   <section id="organizations">
     <h2>Building <span>movements</span></h2>
-    <h3>organizations i’ve been involved in</h3>
+    <h3>{{ $t('organizationsListDesc') }}</h3>
     <div class="cardList">
       <OrgCard v-for="organization in organizations" :key="organization.name" :description="organization.description"
                :image="organization.image" :name="organization.name" :url="organization.url"></OrgCard>
