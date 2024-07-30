@@ -68,7 +68,7 @@ p {
 }
 
 section {
-  width: 65%;
+  width: clamp(300px, 80%, 1400px);
   padding-top: 200px;
   margin: 0 auto;
 }
@@ -129,6 +129,10 @@ a {
 @media screen and (max-width: 768px) {
   section {
     width: 85%;
+    padding-top: 50px;
+  }
+
+  section:not(body > section) {
     padding-top: 50px;
   }
 

@@ -1,9 +1,10 @@
 <script setup>
-defineProps(['name', 'description', 'url'])
+defineProps(['name', 'description', 'url', 'image', 'variant']);
 </script>
 
 <template>
-  <a :href="url" target="_blank" class="card">
+  <a :href="url" target="_blank" class="card" :class="variant === 'featured' ? 'featured' : ''">
+    <img v-if="image" :src="image" alt="Project Image" />
     <div class="header">
       <h4>{{ name }}</h4>
     </div>
@@ -44,6 +45,26 @@ p {
   padding: 22px;
 }
 
+.card.featured {
+  width: min-content;
+  padding: 0;
+
+  img {
+    width: max-content;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .header {
+    padding: 20px 20px 0;
+  }
+
+  p {
+    padding: 0 20px 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     gap: 20px;
@@ -55,12 +76,27 @@ p {
     padding-bottom: 20px;
   }
 
+  .card.featured {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 200px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    p {
+      padding: 0 20px 20px;
+      width: fit-content;
+    }
+  }
+
   h4 {
-    font-size: 24px;
+    font-size: 1.3rem;
   }
 
   p {
-    font-size: 20px;
+    font-size: 1.1rem;
     width: 100%;
     margin: 0;
   }

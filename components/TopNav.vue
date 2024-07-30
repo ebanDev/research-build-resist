@@ -140,7 +140,7 @@ header {
     margin: 0;
     top: 0;
     height: 100px;
-    justify-content: center;
+    justify-content: space-evenly;
     max-width: 100vw;
     background-color: $color-header-background;
     z-index: 100;

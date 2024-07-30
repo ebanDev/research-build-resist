@@ -25,6 +25,15 @@ p {
 @media (max-width: 768px) {
   section {
     padding-top: 150px;
+    padding-bottom: 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 }
 </style>
