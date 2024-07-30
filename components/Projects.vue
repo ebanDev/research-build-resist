@@ -14,7 +14,7 @@ console.log(projects)
   <section>
     <div class="header">
       <div class="titles">
-        <h2>Crafting <sfrpan>projects</sfrpan></h2>
+        <h2>Crafting <span>projects</span></h2>
         <h3>{{$t('projectsListDesc')}}</h3>
       </div>
     </div>

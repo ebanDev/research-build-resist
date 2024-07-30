@@ -25,9 +25,6 @@ onMounted(() => {
       <a href="https://github.com/ebanDev" target="_blank">
         <Icon name="lucide:github"/>
       </a>
-      <a href="https://twitter.com/eban_non" target="_blank">
-        <Icon name="lucide:twitter"/>
-      </a>
       <a href="mailto:contact@eban.eu.org" target="_blank">
         <Icon name="lucide:mail"/>
       </a>

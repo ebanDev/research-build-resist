@@ -9,7 +9,9 @@ export default defineI18nConfig(() => ({
             articleListDesc: 'articles i’ve written',
             viewAll: 'See more',
             projectsListDesc: 'ventures i’m working on',
-            organizationsListDesc: 'organizations i’ve been involved in'
+            organizationsListDesc: 'organizations i’ve been involved in',
+            contactDesc: 'I\'m always open to new opportunities, collaborations, and discussions. Feel free to reach out to me through the bot or via the contact informations below.',
+            contactBtn: 'Contact me'
         },
         fr: {
             hi: 'Salut 👋, je suis',
@@ -18,7 +20,9 @@ export default defineI18nConfig(() => ({
             articleListDesc: 'articles que j’ai écrit',
             viewAll: 'Voir plus',
             projectsListDesc: 'projets sur lesquels je travaille',
-            organizationsListDesc: 'organisations dans lesquelles j’ai été impliqué'
+            organizationsListDesc: 'organisations dans lesquelles j’ai été impliqué',
+            contactDesc: 'Je suis toujours ouvert à de nouvelles opportunités, collaborations et discussions. N\'hésitez pas à me contacter via le bot ou via les informations de contact ci-dessous.',
+            contactBtn: 'Me contacter'
         }
     }
 }))

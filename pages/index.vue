@@ -4,4 +4,5 @@
   <Projects />
   <Organizations/>
   <InlineArticles/>
+  <Contact/>
 </template>

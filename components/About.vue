@@ -2,6 +2,7 @@
   <section id="about">
     <h1>{{ $t('hi') }} <span>Eban</span>, {{ $t('work') }}</h1>
     <p>{{ $t('aboutDesc') }}</p>
+    <button><nuxt-link to="#contact">{{ $t('contactBtn') }}</nuxt-link></button>
   </section>
 </template>
 
