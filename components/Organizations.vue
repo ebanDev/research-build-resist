@@ -2,18 +2,18 @@
   <section id="organizations">
     <h2>Building <span>movements</span></h2>
     <h3>{{ $t('organizationsListDesc') }}</h3>
-    <ClientOnly v-if="$viewport.isLessThan('tablet')">
-      <swiper-container ref="swiperRef" :init="false">
+    <ClientOnly>
+      <swiper-container ref="swiperRef" :init="false" v-if="$viewport.isLessThan('tablet')">
         <swiper-slide v-for="organization in organizations" :key="organization.name">
           <AtomicOrgCard :name="organization.name" :description="organization.description" :image="organization.image"
                    :url="organization.url" variant="featured"/>
         </swiper-slide>
       </swiper-container>
+      <div class="cardList" v-else>
+        <AtomicOrgCard v-for="organization in organizations" :key="organization.name" :description="organization.description"
+                :image="organization.image" :name="organization.name" :url="organization.url" />
+      </div>
     </ClientOnly>
-    <div class="cardList" v-else>
-      <AtomicOrgCard v-for="organization in organizations" :key="organization.name" :description="organization.description"
-               :image="organization.image" :name="organization.name" :url="organization.url" />
-    </div>
     
   </section>
 </template>

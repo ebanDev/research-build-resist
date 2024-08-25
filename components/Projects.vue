@@ -32,8 +32,8 @@ const swiperTwo = useSwiper(swiperRefTwo, {
       </div>
     </div>
 
-    <ClientOnly v-if="$viewport.isLessThan('tablet')">
-      <swiper-container ref="swiperRef" :init="false">
+    <ClientOnly>
+      <swiper-container ref="swiperRef" :init="false" v-if="$viewport.isLessThan('tablet')">
         <swiper-slide
             v-for="project in featuredProjects"
             :key="project.id"
@@ -47,21 +47,21 @@ const swiperTwo = useSwiper(swiperRefTwo, {
           />
         </swiper-slide>
       </swiper-container>
+      <div class="cardList" v-else>
+        <AtomicProjectCard
+            v-for="project in featuredProjects"
+            :key="project.id"
+            :name="project.Name"
+            :description="project.Description"
+            :url="project.Link"
+            :image="project.Image[0].url"
+            variant="featured"
+        />
+      </div>
     </ClientOnly>
-    <div class="cardList" v-else>
-      <AtomicProjectCard
-          v-for="project in featuredProjects"
-          :key="project.id"
-          :name="project.Name"
-          :description="project.Description"
-          :url="project.Link"
-          :image="project.Image[0].url"
-          variant="featured"
-      />
-    </div>
 
-    <ClientOnly v-if="$viewport.isLessThan('tablet')">
-      <swiper-container ref="swiperRefTwo" :init="false">
+    <ClientOnly>
+      <swiper-container ref="swiperRefTwo" :init="false" v-if="$viewport.isLessThan('tablet')"
         <swiper-slide
             v-for="project in otherProjects"
             :key="project.id"
@@ -73,16 +73,16 @@ const swiperTwo = useSwiper(swiperRefTwo, {
           />
         </swiper-slide>
       </swiper-container>
+      <div class="cardList" v-else>
+        <AtomicProjectCard
+            v-for="project in otherProjects"
+            :key="project.id"
+            :name="project.Name"
+            :description="project.Description"
+            :url="project.Link"
+        />
+      </div>
     </ClientOnly>
-    <div class="cardList" v-else>
-      <AtomicProjectCard
-          v-for="project in otherProjects"
-          :key="project.id"
-          :name="project.Name"
-          :description="project.Description"
-          :url="project.Link"
-      />
-    </div>
   </section>
 </template>
 
