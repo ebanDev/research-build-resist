@@ -1,13 +1,26 @@
 <script setup lang="ts">
 import {fetchProjects} from "~/services/projects";
-import ProjectCard from "~/components/atomic/ProjectCard.vue";
-
 
 const projects = await fetchProjects();
 const featuredProjects = projects.projects.filter((project: any) => project.Featured === true);
 const otherProjects = projects.projects.filter((project: any) => project.Featured === false);
+const swiperRef = ref(null);
+const swiperRefTwo = ref(null);
+const swiper = useSwiper(swiperRef, {
+  effect: 'cards',
+  slidesPerView: 1,
+  cardsEffect: {slideShadows: true, perSlideOffset: 7},
+  grabCursor: true,
+  centeredSlides: true,
+});
 
-console.log(projects)
+const swiperTwo = useSwiper(swiperRefTwo, {
+  effect: 'cards',
+  slidesPerView: 1,
+  cardsEffect: {slideShadows: true, perSlideOffset: 7},
+  grabCursor: true,
+  centeredSlides: true,
+});
 </script>
 
 <template>
@@ -19,8 +32,24 @@ console.log(projects)
       </div>
     </div>
 
-    <div class="cardList">
-      <ProjectCard
+    <ClientOnly v-if="$viewport.isLessThan('tablet')">
+      <swiper-container ref="swiperRef" :init="false">
+        <swiper-slide
+            v-for="project in featuredProjects"
+            :key="project.id"
+        >
+          <AtomicProjectCard
+              :name="project.Name"
+              :description="project.Description"
+              :url="project.Link"
+              :image="project.Image[0].url"
+              variant="featured"
+          />
+        </swiper-slide>
+      </swiper-container>
+    </ClientOnly>
+    <div class="cardList" v-else>
+      <AtomicProjectCard
           v-for="project in featuredProjects"
           :key="project.id"
           :name="project.Name"
@@ -31,8 +60,22 @@ console.log(projects)
       />
     </div>
 
-    <div class="cardList">
-      <ProjectCard
+    <ClientOnly v-if="$viewport.isLessThan('tablet')">
+      <swiper-container ref="swiperRefTwo" :init="false">
+        <swiper-slide
+            v-for="project in otherProjects"
+            :key="project.id"
+        >
+          <AtomicProjectCard
+              :name="project.Name"
+              :description="project.Description"
+              :url="project.Link"
+          />
+        </swiper-slide>
+      </swiper-container>
+    </ClientOnly>
+    <div class="cardList" v-else>
+      <AtomicProjectCard
           v-for="project in otherProjects"
           :key="project.id"
           :name="project.Name"
@@ -44,7 +87,7 @@ console.log(projects)
 </template>
 
 <style scoped lang="scss">
-@import "/assets/scss/variables.scss";
+@import "/assets/scss/_variables.scss";
 
 .header {
   display: flex;
@@ -56,6 +99,15 @@ console.log(projects)
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+swiper-container {
+  margin-top: 1rem;
+}
+
+swiper-slide {
+  border-radius: 20px;
+  border: 2px solid $color-border;
 }
 
 @media (max-width: 768px) {

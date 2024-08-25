@@ -72,11 +72,13 @@ p {
 
   .card {
     width: fit-content;
-    height: max-content;
+    height: 120px;
     padding-bottom: 20px;
+    border: none;
   }
 
   .card.featured {
+    height: max-content;
     width: 100%;
 
     img {

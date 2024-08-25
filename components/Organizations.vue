@@ -2,20 +2,36 @@
   <section id="organizations">
     <h2>Building <span>movements</span></h2>
     <h3>{{ $t('organizationsListDesc') }}</h3>
-    <div class="cardList">
-      <OrgCard v-for="organization in organizations" :key="organization.name" :description="organization.description"
-               :image="organization.image" :name="organization.name" :url="organization.url"></OrgCard>
+    <ClientOnly v-if="$viewport.isLessThan('tablet')">
+      <swiper-container ref="swiperRef" :init="false">
+        <swiper-slide v-for="organization in organizations" :key="organization.name">
+          <AtomicOrgCard :name="organization.name" :description="organization.description" :image="organization.image"
+                   :url="organization.url" variant="featured"/>
+        </swiper-slide>
+      </swiper-container>
+    </ClientOnly>
+    <div class="cardList" v-else>
+      <AtomicOrgCard v-for="organization in organizations" :key="organization.name" :description="organization.description"
+               :image="organization.image" :name="organization.name" :url="organization.url" />
     </div>
+    
   </section>
 </template>
 
 <style lang="scss" scoped>
 @import "/assets/scss/variables.scss";
+
+swiper-container {
+  margin-top: 1rem;
+}
+
+swiper-slide {
+  border-radius: 20px;
+  border: 2px solid $color-border;
+}
 </style>
 
 <script setup>
-import OrgCard from './atomic/OrgCard.vue'
-
 const organizations = ref([
   {
     name: 'Mouvement National Lycéen',
@@ -31,4 +47,13 @@ const organizations = ref([
     description: 'I co-founded I Learned, a project dedicated to democratizing computer science through diverse mediums. With a team of 14 contributors, I\'ve written dozens of blog, striving to make information technology accessible to a wider audience.',
   }
 ])
+
+const swiperRef = ref(null)
+const swiper = useSwiper(swiperRef, {
+  effect: 'cards',
+  slidesPerView: 1,
+  cardsEffect: {slideShadows: true, perSlideOffset: 7},
+  grabCursor: true,
+  centeredSlides: true,
+});
 </script>

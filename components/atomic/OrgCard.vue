@@ -56,6 +56,7 @@ p {
     width: 100%;
     height: max-content;
     padding-bottom: 20px;
+    border: none;
   }
 
   h4 {

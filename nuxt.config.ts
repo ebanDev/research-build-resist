@@ -6,7 +6,9 @@ export default defineNuxtConfig({
       '@nuxtjs/sitemap',
       '@vueuse/nuxt',
       'nuxt-icon',
-      "@nuxtjs/i18n"
+      "@nuxtjs/i18n",
+      "nuxt-viewport",
+      "nuxt-swiper"
   ],
 
   i18n: {
