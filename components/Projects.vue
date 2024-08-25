@@ -33,7 +33,7 @@ const swiperTwo = useSwiper(swiperRefTwo, {
     </div>
 
     <ClientOnly>
-      <swiper-container ref="swiperRef" :init="false" v-if="$viewport.isLessThan('tablet')">
+      <swiper-container ref="swiperRef" :init="false" v-if="$device.isMobile">
         <swiper-slide
             v-for="project in featuredProjects"
             :key="project.id"
@@ -61,7 +61,7 @@ const swiperTwo = useSwiper(swiperRefTwo, {
     </ClientOnly>
 
     <ClientOnly>
-      <swiper-container ref="swiperRefTwo" :init="false" v-if="$viewport.isLessThan('tablet')">
+      <swiper-container ref="swiperRefTwo" :init="false" v-if="$device.isMobile">
         <swiper-slide
             v-for="project in otherProjects"
             :key="project.id"

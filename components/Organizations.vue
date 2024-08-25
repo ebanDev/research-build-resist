@@ -3,7 +3,7 @@
     <h2>Building <span>movements</span></h2>
     <h3>{{ $t('organizationsListDesc') }}</h3>
     <ClientOnly>
-      <swiper-container ref="swiperRef" :init="false" v-if="$viewport.isLessThan('tablet')">
+      <swiper-container ref="swiperRef" :init="false" v-if="$device.isMobile">
         <swiper-slide v-for="organization in organizations" :key="organization.name">
           <AtomicOrgCard :name="organization.name" :description="organization.description" :image="organization.image"
                    :url="organization.url" variant="featured"/>

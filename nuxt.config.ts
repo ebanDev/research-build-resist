@@ -1,15 +1,5 @@
 export default defineNuxtConfig({
-  modules: [
-      '@nuxt/image-edge',
-      '@nuxtjs/google-fonts',
-      'nuxt-schema-org',
-      '@nuxtjs/sitemap',
-      '@vueuse/nuxt',
-      'nuxt-icon',
-      "@nuxtjs/i18n",
-      "nuxt-viewport",
-      "nuxt-swiper"
-  ],
+  modules: ['@nuxt/image-edge', '@nuxtjs/google-fonts', 'nuxt-schema-org', '@nuxtjs/sitemap', '@vueuse/nuxt', 'nuxt-icon', "@nuxtjs/i18n", "nuxt-swiper", '@nuxtjs/device'],
 
   i18n: {
       locales: ['en', 'fr'],
