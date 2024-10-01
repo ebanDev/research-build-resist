@@ -1,6 +1,5 @@
 <template>
   <section>
-    <top-nav/>
     <div class="header">
       <div class="titles">
         <h2>Bytes of <span>insight</span></h2>

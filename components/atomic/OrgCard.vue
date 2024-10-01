@@ -8,7 +8,7 @@ defineProps(['name', 'description', 'url', 'image'])
   <a :href="url" target="_blank">
     <div class="card">
       <div class="header">
-        <NuxtPicture :alt="name" :src="image" class="orgIcon"/>
+        <img :alt="name" :src="image" class="orgIcon"/>
         <h4>{{ name }}</h4>
       </div>
       <p>{{ description }}</p>

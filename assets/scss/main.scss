@@ -31,7 +31,6 @@ html {
 
 body {
   background: $color-background;
-  padding-bottom: 100px;
   overflow-x: hidden;
 }
 
@@ -64,7 +63,7 @@ p {
   font-family: $font-family-sans-serif;
   font-weight: 600;
   color: $color-text-secondary;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 section {
@@ -149,16 +148,12 @@ a {
   }
 
   p {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .cardList {
     gap: 20px;
     flex-direction: column;
-  }
-
-  body {
-    padding-bottom: 30px;
   }
 
   .orgIcon img {

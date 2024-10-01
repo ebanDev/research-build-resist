@@ -1,6 +1,5 @@
 <template>
   <section class="article">
-    <top-nav/>
     <h1>
       {{ articleProps.Title }}
     </h1>
