@@ -73,7 +73,7 @@ const swiperTwo = useSwiper(swiperRefTwo, {
           />
         </swiper-slide>
       </swiper-container>
-      <div class="cardList" v-else>
+      <div class="cardGrid" v-else>
         <AtomicProjectCard
             v-for="project in otherProjects"
             :key="project.id"
@@ -96,9 +96,18 @@ const swiperTwo = useSwiper(swiperRefTwo, {
 }
 
 .cardList {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: inline-flex;
+  width: 82vw;
+  padding: 15px 0;
+}
+
+.cardGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 swiper-container {

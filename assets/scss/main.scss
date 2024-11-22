@@ -117,12 +117,12 @@ a {
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
+}
 
-  &:hover {
-    box-shadow: 2px 2px 15px 0 rgba(40, 10, 0, 0.10);
-    cursor: pointer;
-    transform: translateY(-7px);
-  }
+.card:not(.featured):hover {
+  box-shadow: 2px 2px 15px 0 rgba(40, 10, 0, 0.10);
+  cursor: pointer;
+  transform: translateY(-7px);
 }
 
 @media screen and (max-width: 768px) {
