@@ -1,5 +1,5 @@
 @use 'sass:color';
-@import "variables";
+@use "variables";
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -10,16 +10,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: color.adjust($color-accent, $alpha: -0.2);
+  background: color.adjust(variables.$color-accent, $alpha: -0.2);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $color-accent;
+  background: variables.$color-accent;
 }
 
 html {
-  font-family: $font-family-sans-serif;
+  font-family: variables.$font-family-sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -30,18 +30,18 @@ html {
 }
 
 body {
-  background: $color-background;
+  background: variables.$color-background;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
-  font-family: $font-family-serif;
-  color: $color-text-primary;
+  font-family: variables.$font-family-serif;
+  color: variables.$color-text-primary;
   font-weight: normal;
   margin: 0;
 
   & span {
-    color: $color-accent;
+    color: variables.$color-accent;
   }
 }
 
@@ -55,14 +55,14 @@ h2 {
 
 h3 {
   font-size: 2rem;
-  color: $color-text-secondary;
+  color: variables.$color-text-secondary;
   margin-top: 5px;
 }
 
 p {
-  font-family: $font-family-sans-serif;
+  font-family: variables.$font-family-sans-serif;
   font-weight: 600;
-  color: $color-text-secondary;
+  color: variables.$color-text-secondary;
   font-size: 1rem;
 }
 
@@ -84,19 +84,19 @@ section:not(body > section) {
 }
 
 button {
-  background: $color-accent;
-  color: $color-background;
+  background: variables.$color-accent;
+  color: variables.$color-background;
   border: none;
   cursor: pointer;
   border-radius: 0.8rem;
   padding: 12.5px 17.5px;
-  font-family: $font-family-sans-serif;
+  font-family: variables.$font-family-sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.2s ease;
 
   &:hover {
-    background: $color-accent-darker;
+    background: variables.$color-accent-darker;
   }
 }
 
@@ -109,7 +109,7 @@ a {
   border-radius: 20px;
   border: 2px solid #E6E3E1;
   background: #FCFBF7;
-  box-shadow: $box-shadow-primary;
+  box-shadow: variables.$box-shadow-primary;
   width: 400px;
   height: 400px;
   transition: all 0.1s ease;

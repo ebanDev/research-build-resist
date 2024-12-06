@@ -63,6 +63,7 @@ export default defineNuxtConfig({
   css: [
       'normalize.css/normalize.css',
       '@/assets/scss/main.scss',
+      '@/assets/scss/_variables.scss',
   ],
 
   compatibilityDate: '2024-07-12',
