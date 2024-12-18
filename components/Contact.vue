@@ -1,12 +1,8 @@
 <script setup>
-onMounted(() => {
-  const typebotInitScript = document.createElement("script");
-  typebotInitScript.type = "module";
-  typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js'
-
-Typebot.initStandard({ typebot: "my-typebot-1py3k12" });
-`;
-  document.body.append(typebotInitScript);});
+const typeBotStandardConfig = {
+  typebot: "my-typebot-1py3k12",
+  apiHost: "https://typebot.co",
+}
 </script>
 
 <template>
@@ -24,11 +20,11 @@ Typebot.initStandard({ typebot: "my-typebot-1py3k12" });
             <Icon name="lucide:mail" /> <a href="mailto:pro@eban.eu.org"> pro@eban.eu.org </a>
           </li>
           <li>
-            <Icon name="lucide:calendar" /> <a href="https://calendly.com/eban-rami/prise-de-contact-devis?back=1&month=2024-07" target="_blank"> Réserver un appel </a>
+            <Icon name="lucide:calendar" /> <a href="https://calendly.com/eban-rami/prise-de-contact-devis?back=1" target="_blank"> {{ $t('bookCall') }} </a>
           </li>
         </ul>
       </p>
-      <typebot-standard></typebot-standard>
+      <type-bot-standard :config="typeBotStandardConfig" />
     </div>
  </section>
 </template>

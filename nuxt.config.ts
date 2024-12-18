@@ -67,4 +67,8 @@ export default defineNuxtConfig({
   ],
 
   compatibilityDate: '2024-07-12',
+
+  plugins: [
+    { src: '~/plugins/typebot.client.js', mode: 'client' }
+  ]
 })

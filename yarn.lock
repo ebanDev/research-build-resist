@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@alisaitteke/typebot-vue@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@alisaitteke/typebot-vue/-/typebot-vue-0.0.7.tgz#eea92d43d6d93fa0f9982ee5fe8f6301e411ba8f"
+  integrity sha512-adZ+LxjZkfMwa5Cyi7D5pP8BjMLqTFpqRPihaPhTwBIHxNJ6hOwVGRzXEjw1HAJcjNcdIQQOsWp9lHh/nKYFJQ==
+
 "@ampproject/remapping@^2.2.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.3.0.tgz#ed441b6fa600072520ce18b43d2c8cc8caecc7f4"
